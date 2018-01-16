@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="No more &#xf1e2;"
-        android:textSize="22sp"
+        android:text="It's just a bomb. &#xf1e2;"
+        android:textSize="32sp"
         app:fontAsset="fontawesome-webfont.ttf"/>
 
 </android.support.constraint.ConstraintLayout>

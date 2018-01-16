@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -40,13 +41,20 @@ public class RichTextView extends AppCompatTextView {
         if (typedArray == null) return;
 
         String fontAsset = typedArray.getString(R.styleable.RichTextView_fontAsset);
+        loadFont(fontAsset);
+        typedArray.recycle();
+    }
+
+    /**
+     * loads the font in the specified path relative to the assets folder.
+     * @param fontAsset - font link
+     */
+    public void loadFont(@Nullable String fontAsset) {
         if (FontProvider.isStringEmpty(fontAsset)) return;
 
         Typeface font = FontProvider.getInstance().getFont(fontAsset);
         int style = getTypeface() != null ? getTypeface().getStyle() : Typeface.NORMAL;
         if (font != null) setTypeface(font, style);
         else Log.e(TAG, String.format("Typeface %1$s not loaded", fontAsset));
-
-        typedArray.recycle();
     }
 }
