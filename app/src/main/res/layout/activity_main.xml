@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="sasd97.github.com.richtextview.MainActivity">
+    android:background="@color/colorAccent"
+    android:padding="8dp"
+    tools:context="st235.github.com.richtextview.MainActivity">
 
-    <sasd97.github.com.lib_richtextview.RichTextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="It's just a bomb. &#xf1e2;"
-        android:textSize="32sp"
-        app:fontAsset="fontawesome-webfont.ttf"/>
+    <st235.github.com.richtextview.RichTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="left|start"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/richtextview_presentational_text"
+        android:textColor="@color/colorText"
+        android:textSize="22sp"
+        app:fontAsset="fontawesome-webfont.ttf"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:text="Font Awesome (http://fontawesome.io/)"
+        android:textColor="@color/colorText"
+        android:textSize="16sp"
+        />
+</FrameLayout>

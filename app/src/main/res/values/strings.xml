@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">RichTextView</string>
+    <string name="app_name">RichTextView Sample App</string>
+    <string name="richtextview_presentational_text">&#xf003; example@mail.com\n&#xf2c6; @telegram\n&#xf16d; instagram\n&#xf082; facebook\n&#xf17e; skype\n&#xf118; follow me</string>
 </resources>

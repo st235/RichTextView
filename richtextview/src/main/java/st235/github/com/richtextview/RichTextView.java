@@ -1,4 +1,7 @@
-package sasd97.github.com.lib_richtextview;
+// Copyright © 2018 by Alexander Dadukin (st235@yandex.ru)
+// All rights reserved.
+
+package st235.github.com.richtextview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,9 +13,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 
 /**
- * Created by alexander on 14/07/2017.
+ * A class representing a view that is able to work with custom fonts.
  */
-
 public class RichTextView extends AppCompatTextView {
 
     private static final String TAG = RichTextView.class.getCanonicalName();
@@ -46,7 +48,7 @@ public class RichTextView extends AppCompatTextView {
     }
 
     /**
-     * loads the font in the specified path relative to the assets folder.
+     * Loads the font in the specified path relative to the assets folder.
      * @param fontAsset - font link
      */
     public void loadFont(@Nullable String fontAsset) {
