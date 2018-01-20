@@ -1,7 +1,7 @@
 // Copyright © 2018 by Alexander Dadukin (st235@yandex.ru)
 // All rights reserved.
 
-package st235.github.com.richtextview;
+package st235.github.com.app_richtextview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

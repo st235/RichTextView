@@ -4,6 +4,26 @@
 
 <img src="https://raw.githubusercontent.com/st235/RichTextView/master/pictures/examples.png" width="270" height="480">
 
+## Install
+
+From maven
+
+```xml
+<dependency>
+  <groupId>com.github.st235</groupId>
+  <artifactId>richtextview</artifactId>
+  <version>0.0.2</version>
+  <type>pom</type>
+</dependency>
+```
+
+From gradle
+
+```
+compile 'com.github.st235:richtextview:0.0.2'
+```
+
+## Usage
 
 First of all, the library must be initialized. If this step is omitted, the attempt to use will generate an exception.
 

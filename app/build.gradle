@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
 
     defaultConfig {
-        applicationId "st235.github.com.richtextview"
+        applicationId "st235.github.com.app_richtextview"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
