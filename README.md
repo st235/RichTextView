@@ -2,8 +2,6 @@
 
 # RichTextView
 
-<img src="https://raw.githubusercontent.com/st235/RichTextView/master/pictures/examples.png" width="270" height="480">
-
 ## Install
 
 From maven
@@ -24,6 +22,8 @@ compile 'com.github.st235:richtextview:0.0.2'
 ```
 
 ## Usage
+
+<img src="https://raw.githubusercontent.com/st235/RichTextView/master/pictures/examples.png" width="270" height="480">
 
 First of all, the library must be initialized. If this step is omitted, the attempt to use will generate an exception.
 
