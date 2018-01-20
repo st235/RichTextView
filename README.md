@@ -42,7 +42,7 @@ public class App extends Application {
 View easily configurable from the markup,
 
 ```xml
-    <sasd97.github.com.lib_richtextview.RichTextView
+    <st235.github.com.richtextview.RichTextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
