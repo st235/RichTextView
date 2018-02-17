@@ -6,6 +6,7 @@ package st235.github.com.richtextview;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,10 +18,17 @@ public class FontProvider {
 
     private static FontProvider instance;
 
-    private AssetManager assetsManager;
-    private Map<String, Typeface> fonts = new HashMap<>();
+    @NonNull
+    private final AssetManager assetsManager;
 
-    private FontProvider(AssetManager assetsManager) {
+    @NonNull
+    private final Map<String, Typeface> fonts = new HashMap<>();
+
+    private FontProvider(@Nullable AssetManager assetsManager) {
+        if (assetsManager == null) {
+            throw new IllegalArgumentException("Assets manager should not be null");
+        }
+
         this.assetsManager = assetsManager;
     }
 
@@ -36,6 +44,7 @@ public class FontProvider {
      * Returns provider. If the provider was not created, it throws an error.
      * @return FontProvider instance
      */
+    @NonNull
     public static FontProvider getInstance() {
         if (instance == null)
             throw new IllegalStateException("FontProvider instance must be initialized!");
@@ -47,7 +56,8 @@ public class FontProvider {
      * @param asset path to font, for example, __fonts/fontawesome.ttf__
      * @return loaded font as Typeface
      */
-    public Typeface getFont(String asset) {
+    @NonNull
+    public Typeface getFont(@NonNull String asset) {
         if (fonts.containsKey(asset)) return fonts.get(asset);
 
         try {
@@ -59,11 +69,12 @@ public class FontProvider {
         }
     }
 
-    static boolean isStringEmpty(String string) {
+    static boolean isStringEmpty(@Nullable String string) {
         return string == null || string.isEmpty();
     }
 
-    private Typeface retryLoadResource(String asset) {
+    @NonNull
+    private Typeface retryLoadResource(@Nullable String asset) {
         String fixedAsset = fixAssetFilename(asset);
         Typeface font = Typeface.createFromAsset(assetsManager, fixedAsset);
         fonts.put(asset, font);
@@ -71,7 +82,8 @@ public class FontProvider {
         return font;
     }
 
-    private String fixAssetFilename(String asset) {
+    @Nullable
+    private String fixAssetFilename(@Nullable String asset) {
         if (isStringEmpty(asset)) return asset;
 
         if (!isAssetHaveExtension(asset))

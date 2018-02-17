@@ -19,18 +19,19 @@ public class RichTextView extends AppCompatTextView {
 
     private static final String TAG = RichTextView.class.getCanonicalName();
 
-    public RichTextView(Context context) {
+    public RichTextView(@NonNull Context context) {
         super(context);
     }
 
-    public RichTextView(Context context, AttributeSet attrs) {
+    public RichTextView(@NonNull Context context, @NonNull AttributeSet attrs) {
         super(context, attrs);
 
         if (isInEditMode()) return;
         loadFont(context, attrs);
     }
 
-    public RichTextView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public RichTextView(@NonNull Context context,
+                        @NonNull AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         if (isInEditMode()) return;
