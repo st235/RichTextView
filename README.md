@@ -1,3 +1,5 @@
+[ ![Download](https://api.bintray.com/packages/st235/RichTextView/RichTextView/images/download.svg) ](https://bintray.com/st235/RichTextView/RichTextView/_latestVersion)
+
 <img src="https://raw.githubusercontent.com/st235/RichTextView/master/pictures/logo.png" width="410" height="138">
 
 # RichTextView
