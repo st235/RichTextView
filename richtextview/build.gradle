@@ -1,9 +1,22 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
-ext {
-    PUBLISH_GROUP_ID = 'com.github.st235'
-    PUBLISH_ARTIFACT_ID = 'richtextview'
-    PUBLISH_VERSION = '0.0.3'
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.8.0'
+    }
+}
+
+publish {
+    userOrg = 'st235'
+    groupId = 'com.github.st235'
+    artifactId = 'richtextview'
+    publishVersion = '0.0.3'
+    desc = 'A simple way to work with icon fonts.'
+    website = 'https://github.com/st235'
 }
 
 android {
@@ -29,5 +42,3 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:support-annotations:27.1.1'
 }
-
-apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
