@@ -12,7 +12,7 @@ From maven
 <dependency>
   <groupId>com.github.st235</groupId>
   <artifactId>richtextview</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
   <type>pom</type>
 </dependency>
 ```
@@ -20,7 +20,7 @@ From maven
 From gradle
 
 ```
-compile 'com.github.st235:richtextview:0.0.2'
+implementation 'com.github.st235:richtextview:0.0.3'
 ```
 
 ## Usage

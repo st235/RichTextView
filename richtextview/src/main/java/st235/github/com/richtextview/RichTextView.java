@@ -17,7 +17,7 @@ import android.util.Log;
  */
 public class RichTextView extends AppCompatTextView {
 
-    private static final String TAG = RichTextView.class.getCanonicalName();
+    private static final String TAG = "RichTextView";
 
     public RichTextView(@NonNull Context context) {
         super(context);
