@@ -1,5 +1,5 @@
-[ ![Download](https://api.bintray.com/packages/st235/RichTextView/RichTextView/images/download.svg) ](https://bintray.com/st235/RichTextView/RichTextView/_latestVersion)
-
+ [ ![Download](https://api.bintray.com/packages/st235/maven/richtextview/images/download.svg?version=0.0.3) ](https://bintray.com/st235/maven/richtextview/0.0.3/link)
+ 
 <img src="https://raw.githubusercontent.com/st235/RichTextView/master/pictures/logo.png" width="410" height="138">
 
 # RichTextView
@@ -60,6 +60,15 @@ but if you need to download the font manually from the Assets, not everything is
      * @param fontAsset - font link
      */
     public void loadFont(@Nullable String fontAsset)
+```
+
+Also, you can use the Span to display custom fonts with _CustomFontSpan_.
+
+```java
+    final TextView footer = ...;
+    SpannableString footerText = new SpannableString( "\uf0e7 Font Awesome (http://fontawesome.io/)");
+    footerText.setSpan(new CustomFontSpan("", "fontawesome-webfont.ttf"), 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+    footer.setText(footerText);
 ```
 
 ## License
